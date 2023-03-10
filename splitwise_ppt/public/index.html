@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="EN"><head><meta charset="utf8"><title>Unveil</title><link rel="stylesheet" href="unveil.css"><link rel="stylesheet" href="user_css.css"><link rel="stylesheet" href="highlight.css"><link rel="stylesheet" href="fontawesome/css/fontawesome.css"></head><body><div onclick="next_slide_right()" class="arrow-right bounce-in"><i class="fas fa-chevron-right"></i></div><div onclick="next_slide_left()" class="arrow-left bounce-in"><i class="fas fa-chevron-left"></i></div><section id="unveil-slide-0"><article><h1>Splitwise - Part 1</h1>
+<p>A short brief of me trying to implement splitwise in Rust.</p>
+<!-- ![Pyro](https://i.postimg.cc/WbNzhxF9/pyro1.png) -->
+<!-- ![Curious](https://i.postimg.cc/QCRfncTC/pyro2.png) -->
+<pre><code>#include&lt;iostream&gt;
+
+int main() {
+    cout &lt;&lt; &quot;(⌐■_■)&quot;;
+}
+</code></pre>
+<pre><code>Wrong lang genius!
+</code></pre>
+<pre><code>fn main(){
+    println!(&quot;(⌐■_■)&quot;);
+}
+</code></pre>
+<pre><code>(⌐■_■)
+</code></pre>
+</article></section><section id="unveil-slide-1"><article><h2>About Me</h2>
+<pre><code>Name: CaptainLazarus ⇔ CL
+
+Stack
+1. Emacs + Rust
+2. VSCode + JS
+3. Shotgun + Java
+
+Extra abilities: I can pray to god and get a solution at 3 in the morning.
+</code></pre>
+<div id="outer">
+    <pre><code>fn get_github_profile(s: &str) -> String{
+    let base_string = "https://github.com/".to_string();
+    let mut output_string = base_string + s;
+    output_string
+}
+fn get_linkedin_profile(s: &str) -> String{
+    ヾ(⌐■_■)ノ♪
+    Let's pretend i wrote a func here 
+}
+fn main() {
+    println!("{}" , get_github_profile("CaptainLazarus"));
+    println!("{}" , get_linkedin_profile("adityagudimetla"));
+}
+    </code></pre>
+    <img src="https://i.postimg.cc/WbNzhxF9/pyro1.png" />
+    <!-- <code>dljfh</code> -->
+    <!-- <div id="sm_icons">
+        <div class="side_icon">
+            <a href="github.com/CaptainLazarus">github.com/CaptainLazarus</a>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/768px-Octicons-mark-github.svg.png">
+        </div>
+        <div class="side_icon">
+            <a href="https://www.linkedin.com/in/adityagudimetla/">linkedin.com/in/adityagudimetla</a>
+            <img src="https://i.postimg.cc/CxtBMLFV/linkedin.png">
+        </div>
+    </div> -->
+</div>
+</article></section><section id="unveil-slide-2"><article><h2>The problem</h2>
+<div>
+<img src="https://i.postimg.cc/ZK2TrLTN/Untitled-Diagram-drawio-4.png"/>
+</div>
+<div>
+<img src="https://i.postimg.cc/xTtxk0Sp/Untitled-Diagram-drawio-5.png"/>
+<img src="https://i.postimg.cc/vHYMFHz0/Delhi-metro-rail-network-svg.png">
+</div>
+<!-- ![Debt Collection](https://i.postimg.cc/xTtxk0Sp/Untitled-Diagram-drawio-5.png)
+![Delhi Metro Map](https://i.postimg.cc/vHYMFHz0/Delhi-metro-rail-network-svg.png) -->
+<!-- How would you solve this? --></article></section><section id="unveil-slide-3"><article><h2>How would you solve it?</h2>
+<ul>
+<li>
+<p>Multiple approaches to problem</p>
+</li>
+<li>
+<p>Problem becomes progressively more harder based on constraints</p>
+</li>
+</ul>
+<p><br />
+</p>
+<div>
+<img src="https://i.postimg.cc/CLR0Lr38/a-P9g7-MR-700bwp.webp"/>
+</div></article></section><section id="unveil-slide-4"><article><h2>Simplest Solution</h2>
+<p>O(1) solution =&gt; Let everyone sort it out and vacation in Goa.</p>
+<p><img src="https://i.postimg.cc/QdZQxwFY/leto-plyazh-kokos-otpusk.jpg" alt="Beach" /></p>
+</article></section><section id="unveil-slide-5"><article><h2>Less Simple Solution</h2>
+<p>Things to note : Total flow in system is 0.</p>
+<div id="top">
+<img src="https://i.postimg.cc/ZK2TrLTN/Untitled-Diagram-drawio-4.png"/>
+<img src="https://i.postimg.cc/XqtBDHGC/Untitled-Diagram-drawio-7.png"/>
+</div>
+<hr />
+<p><br />
+<br />
+</p>
+<div>
+<img id="equation" src="https://i.postimg.cc/bJ2kQSwg/Code-Cogs-Eqn-2.gif"/>
+</div>
+<!-- ![Soft Logic](https://i.postimg.cc/XqtBDHGC/Untitled-Diagram-drawio-7.png) -->
+<!-- ![Equation](https://i.postimg.cc/4NWDDDBt/Code-Cogs-Eqn.png) --></article></section><section id="unveil-slide-6"><article><h2>...</h2>
+<div>
+<img src="https://i.postimg.cc/mgkgKfW1/Capture-d-cran-du-2023-03-11-01-45-32.png"/>
+</div>
+<!-- ![Equation_2]() --></article></section><section id="unveil-slide-7"><article><h2>Algorithm</h2>
+<pre><code>1. Calculate the total flow of each node.
+
+2. Seperate the nodes into Seeders (those with '+'ve flow) and Leechers (those with '-'ve flow)
+
+3. Match head values of both lists. If
+
+4. seeder(head.value) **&gt;** leecher(head.value)
+    a. pop leecher head.
+    b. subtract leecher value from seeder.
+    c. Goto 3
+
+5. seeder(head.value) **&lt;** leecher(head.value)
+    a. pop seeder head.
+    b. subtract seeder value from leecher.
+    c. Goto 3
+
+6. If equal
+    a. Pop both leecher and seeder.
+    b. Goto 3
+
+7. Repeat until both lists are empty.
+
+Emptiness is guaranteed since the total value of both lists are equal (difference in sign).
+</code></pre>
+</article></section><script src="highlight.js"></script><script src="clipboard.js"></script><script src="unveil.js"></script><script src="livereload.js"></script></body></html>

@@ -1,0 +1,4 @@
+name = "unveil"
+language = "EN"
+slides = ["landing.md", "about.md", "basic_principles.md", "how.md", "goa.md", "On.md", "equations.md", "algorithm.md"]
+gitignore = true

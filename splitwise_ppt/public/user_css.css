@@ -1,0 +1,57 @@
+#unveil-slide-0 img {
+  height: 200px;
+  border-radius: 50%; }
+
+#unveil-slide-1 #outer > img {
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid black; }
+
+#unveil-slide-1 #outer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+#unveil-slide-1 .side_icon {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+#unveil-slide-1 .side_icon > img {
+  height: 150px; }
+
+#unveil-slide-2 div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+#unveil-slide-2 img {
+  height: 400px; }
+
+#unveil-slide-3 div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+#unveil-slide-3 img {
+  height: 400px; }
+
+#unveil-slide-5 div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+#unveil-slide-5 #equation {
+  width: 400px; }
+
+#unveil-slide-6 div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+#unveil-slide-6 img {
+  height: 500px; }
+
+#unveil-slide-6 h2 {
+  text-align: center; }
