@@ -62,9 +62,6 @@ where T: std::fmt::Debug
 }
 
 fn custom_zip<'a>(seeders: &mut Vec<Node> , leechers: &mut Vec<Node> , output: &'a mut Vec<Edge>) -> &'a mut Vec<Edge> {
-
-    seeders[0].value =  seeders[0].value + 10;
-    
     // log("\tSeeders Length" , seeders.len());
     // log("\tLeechers Length" , leechers.len());
     match (seeders.is_empty() ,  leechers.is_empty()) {
@@ -83,7 +80,9 @@ fn custom_zip<'a>(seeders: &mut Vec<Node> , leechers: &mut Vec<Node> , output: &
 	    match result {
 		Ordering::Greater => {
 		    let mut temp_leecher: Node =  leechers.pop().unwrap();
-		    let mut temp_seeder: Node = seeders.pop().unwrap();
+		    // let mut temp_seeder: Node = seeders.pop().unwrap();
+
+		    		    // let mut temp_seeder: Node = seeders.pop().unwrap();
 
 		    // log("Temp Seeder" , &temp_seeder);
 		    // log("Temp Leecher" , &temp_leecher);
